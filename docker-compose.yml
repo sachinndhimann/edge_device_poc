@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  edge_flask_simulator:
+    build: ./qemu_simulator
+    privileged: true
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask_app/flask_api_app.tar:/tmp/flask_api_app.tar
